@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon-32x32.png" type="image/pngx" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <div class="submit-notification">
+      <div class="h">
+        <img src="icon-success-check.svg" alt="" />
+        <p><b>Message Sent!</b></p>
+      </div>
+      <div class="desc">
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+    </div>
+    <main>
+      <form id="form" novalidate>
+        <h2>Contact Us</h2>
+        <div class="name-container">
+          <div class="input-container">
+            <label for="firstName">First Name <span class="required">*</span></label>
+            <input type="text" name="name" id="firstName" required />
+            <p id="firstNameRequired" class="required-message"></p>
+          </div>
+          <div class="input-container">
+            <label for="lastName">Last Name <span class="required"></span>*</label>
+            <input type="text" name="name" id="lastName" required />
+            <p id="lastNameRequired" class="required-message"></p>
+          </div>
+        </div>
+        <div class="input-container">
+          <label for="emailAddress">Email Address <span class="required">*</span></label>
+          <input type="email" name="email" id="emailAddress" required />
+          <p id="emailRequired" class="required-message"></p>
+        </div>
+        <div class="input-container">
+          <p>Query Type <span class="required">*</span></p>
+          <div class="radio-container">
+            <label class="option">
+              <input type="radio" name="query" id="generalEnquiry" required />
+              <span class="radio-check"></span>
+              General Enquiry
+            </label>
+            <label class="option">
+              <input type="radio" name="query" id="supportEnquiry" />
+              <span class="radio-check"></span>
+              Support Request
+            </label>
+          </div>
+          <p id="queryRequired" class="required-message"></p>
+        </div>
+        <div class="input-container">
+          <label for="messageInput">Message <span class="required">*</span></label>
+          <textarea name="message" id="messageInput" style="resize: none" rows="8" required></textarea>
+          <p id="messageRequired" class="required-message"></p>
+        </div>
+        <div class="input-container">
+          <label class="checkbox-container">
+            <input type="checkbox" id="consentCheckbox" required />
+            <span class="check"></span>
+            <span>I consent to being contacted by the team <span class="required">*</span></span>
+          </label>
+          <p id="checkboxRequired" class="required-message"></p>
+        </div>
+        <button type="submit" id="submitMessage">Submit</button>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
